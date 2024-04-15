@@ -17,14 +17,14 @@
           <span class="badge bg-info">{{al.id}}
           </span> {{al.nombre}} -> {{al.grado}}° Grado - {{al.edad}} Años
         </li>
-        <!-- @for(al of alumnosArray; track al.id){
+        @for(al of alumnosArray; track al.id){
         <li (click)="openForEdit(al)" class="list-group-item list-group-item-action" [class.active]="al==seleAlumno">
           <span class="badge bg-info">{{al.id}}
           </span> {{al.nombre}} -> {{al.grado}}° Grado - {{al.edad}} Años
         </li>
         }@empty {
         La lista está vacia
-        } -->
+        }
       </ul>
       <div class="col-md-12">
         <table class="table table-dark table-hover">
@@ -60,11 +60,11 @@
               <input [(ngModel)]="seleAlumno.edad" type="number" class="form-control"
                 placeholder="Ingresa la edad del alumno">
             </div>
-            <!-- @if (seleAlumno.id===0) {
+            @if (seleAlumno.id===0) {
             <button (click)="addOrEdit()" class="btn btn-primary">Agregar</button>
             } @else {
             <button (click)="addOrEdit()" class="btn btn-warning">Modificar</button>
-            <button (click)="delete()" class="btn btn-danger ms-3">Eliminar</button>} -->
+            <button (click)="delete()" class="btn btn-danger ms-3">Eliminar</button>}
             <button *ngIf="seleAlumno.id===0" (click)="addOrEdit()" class="btn btn-primary">Agregar</button>
             <button *ngIf="seleAlumno.id!==0" (click)="addOrEdit()" class="btn btn-warning">Modificar</button>
             <button *ngIf="seleAlumno.id!==0" (click)="delete()" class="btn btn-danger ms-3">Eliminar</button>
