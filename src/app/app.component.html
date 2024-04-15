@@ -60,11 +60,11 @@
               <input [(ngModel)]="seleAlumno.edad" type="number" class="form-control"
                 placeholder="Ingresa la edad del alumno">
             </div>
-            @if (seleAlumno.id===0) {
+            <!-- @if (seleAlumno.id===0) {
             <button (click)="addOrEdit()" class="btn btn-primary">Agregar</button>
             } @else {
             <button (click)="addOrEdit()" class="btn btn-warning">Modificar</button>
-            <button (click)="delete()" class="btn btn-danger ms-3">Eliminar</button>}
+            <button (click)="delete()" class="btn btn-danger ms-3">Eliminar</button>} -->
             <button *ngIf="seleAlumno.id===0" (click)="addOrEdit()" class="btn btn-primary">Agregar</button>
             <button *ngIf="seleAlumno.id!==0" (click)="addOrEdit()" class="btn btn-warning">Modificar</button>
             <button *ngIf="seleAlumno.id!==0" (click)="delete()" class="btn btn-danger ms-3">Eliminar</button>
