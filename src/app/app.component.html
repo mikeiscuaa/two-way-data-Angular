@@ -65,6 +65,8 @@
             } @else {
             <button (click)="addOrEdit()" class="btn btn-warning">Modificar</button>
             <button (click)="delete()" class="btn btn-danger ms-3">Eliminar</button>} -->
+
+            
             <button *ngIf="seleAlumno.id===0" (click)="addOrEdit()" class="btn btn-primary">Agregar</button>
             <button *ngIf="seleAlumno.id!==0" (click)="addOrEdit()" class="btn btn-warning">Modificar</button>
             <button *ngIf="seleAlumno.id!==0" (click)="delete()" class="btn btn-danger ms-3">Eliminar</button>
